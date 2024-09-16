@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ course }} - Course Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Course.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the {{ course }} Course {{ semester }} Dashboard</h1>
+
+        <div class="sections">
+            <!-- Study Material Section -->
+            <div class="section">
+                <h2>Study Material</h2>
+                <a href="{{ url_for('course_materials', course=course,semester=semester) }}">
+                    <button>View Study Material</button>
+                </a>
+            </div>
+
+            <!-- Live Class Videos Section -->
+            <div class="section">
+                <h2>Live Class Videos</h2>
+                <h2?{{ semester }}?h2>
+                <a href="{{ url_for('live_videos', course=course,semester=semester) }}">
+                    <button>Watch Live Class Videos</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

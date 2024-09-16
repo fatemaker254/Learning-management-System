@@ -1,0 +1,50 @@
+body {
+    background-image: url('../images/comp.jpg'); /* Replace with the path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sections {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.section {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 45%;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+    color: aliceblue;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+.container h1 {
+    color: rgb(235, 240, 229);
+    background-color: #070707;
+    border-radius: 4px;
+}

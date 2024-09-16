@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Welcome to AB Sir's Coaching</title>
+</head>
+<body>
+    <div class="landing-container">
+        <img src="{{ url_for('static', filename='images/library.jpg') }}" alt="Education Image" class="hero-image">
+        <div class="landing-text">
+            <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Logo" class="logo">
+            <h1>Welcome to AB Sir's Coaching</h1>
+            <p>Your pathway to success starts here. Join us for the best learning experience.</p>
+            <button class="join-btn" onclick="window.location.href='/join'">Join Now</button>
+            <button class="login-btn" onclick="window.location.href='/login'">Login</button>
+            <h4>All Rights Reserved to A Technologies</h4>
+        </div>
+    </div>
+</body>
+</html>
