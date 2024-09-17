@@ -21,6 +21,7 @@ SCOPES = [
 ]
 creds_data = json.loads(os.getenv("GOOGLE_CREDENTIALS"))
 CREDS = Credentials.from_service_account_info(creds_data, scopes=SCOPES)
+# CREDS = Credentials.from_service_account_file("credentials.json", scopes=SCOPES)
 # CREDS = Credentials.from_service_account_file(creds_data, scopes=SCOPES)
 SPREADSHEET_ID = (
     "186jdKDsYUrbIv0B-rFXRCzhiY8veFSPwmvwPbNAGgd4"  # Replace with your Google Sheet ID
