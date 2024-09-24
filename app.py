@@ -19,10 +19,11 @@ SCOPES = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive",
 ]
+"""google_credentials = os.getenv("GOOGLE_CREDENTIALS")
+print(google_credentials)"""
 creds_data = json.loads(os.getenv("GOOGLE_CREDENTIALS"))
 CREDS = Credentials.from_service_account_info(creds_data, scopes=SCOPES)
 # CREDS = Credentials.from_service_account_file("credentials.json", scopes=SCOPES)
-# CREDS = Credentials.from_service_account_file(creds_data, scopes=SCOPES)
 SPREADSHEET_ID = (
     "186jdKDsYUrbIv0B-rFXRCzhiY8veFSPwmvwPbNAGgd4"  # Replace with your Google Sheet ID
 )
@@ -189,7 +190,9 @@ def course_materials():
 # Fetch live video data from Google Sheet
 def get_google_sheet_data(course, semester):
     scopes = ["https://www.googleapis.com/auth/spreadsheets"]
-    creds = Credentials.from_service_account_file("credentials.json", scopes=scopes)
+    # creds = Credentials.from_service_account_file("credentials.json", scopes=scopes)
+    creds_data = json.loads(os.getenv("GOOGLE_CREDENTIALS"))
+    creds = Credentials.from_service_account_info(creds_data, scopes=SCOPES)
 
     # Create a dictionary mapping course and semester combinations to Google Sheet IDs
     course_sem_key = f"{course}sem{semester}"
